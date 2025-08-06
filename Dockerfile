@@ -29,6 +29,9 @@ COPY application_default_credentials.json ./
 # Set Google Application Credentials environment variable
 ENV GOOGLE_APPLICATION_CREDENTIALS=/app/application_default_credentials.json
 
+# Set Python path to include the current directory
+ENV PYTHONPATH=/app
+
 # Expose port 9000
 EXPOSE 9000
 
