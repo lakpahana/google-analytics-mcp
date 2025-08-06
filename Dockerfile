@@ -36,4 +36,4 @@ ENV PYTHONPATH=/app
 EXPOSE 9000
 
 # Run the MCP server with SSE transport on port 9000
-CMD ["fastmcp", "run", "./analytics_mcp/server.py", "--transport", "sse", "--port", "9000"]
+CMD ["fastmcp", "run", "./analytics_mcp/server.py", "--transport", "sse", "--port", "9000", "--host", "0.0.0.0"]
