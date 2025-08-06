@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  google-analytics-mcp:
+    build: .
+    ports:
+      - "9000:9000"
+    environment:
+      - GOOGLE_APPLICATION_CREDENTIALS=/app/application_default_credentials.json
+    restart: unless-stopped
