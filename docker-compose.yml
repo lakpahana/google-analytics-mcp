@@ -12,11 +12,9 @@ services:
   nginx:
     image: nginx:alpine
     ports:
-      - "443:443"
       - "80:80"
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf
-      - /home/ubuntu/ssl:/etc/nginx/ssl
     depends_on:
       - google-analytics-mcp
     restart: unless-stopped
